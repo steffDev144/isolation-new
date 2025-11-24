@@ -1,0 +1,89 @@
+{
+    "card": [
+        {
+            "id": 1,
+            "nameQuest": "ужасы заброшенного приюта",
+            "descrQuest": "Кто такой Арт и что за таинственная бледная девочка, помогающая ему кромсать всех, кто попадется им на пути?..",
+            "locationQuest": "г. Дубна, ул. Промышленная 4а",
+            "priceQuest": 3000,
+            "imageUrl": "/images/CardImages/OneImage.png",
+            "maxPeople": "2-5",
+            "level": 2,
+            "keys": [
+                true,
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        {
+            "id": 2,
+            "nameQuest": "искатели могил",
+            "descrQuest": "Группа исследователей паранормальных явлений, известная на YouTube как «Искатели могил», неожиданно пропадает...",
+            "locationQuest": "г. Дубна, ул. Промышленная 4а",
+            "imageUrl": "/images/CardImages/TwoImage.png",
+            "priceQuest": 3000,
+            "maxPeople": "2-5",
+            "level": 2,
+            "keys": [
+                true,
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        {
+            "id": 3,
+            "nameQuest": "Проклятие монахини",
+            "descrQuest": "В 1954 году в Аббатстве Сент-Фиграт произошел странный случай: большинство послушниц пропало без вести...",
+            "locationQuest": "г. Дубна, ул. Промышленная 4а",
+            "imageUrl": "/images/CardImages/ThreeImage.png",
+            "priceQuest": 3000,
+            "maxPeople": "2-5",
+            "level": 2,
+            "keys": [
+                true,
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        {
+            "id": 4,
+            "nameQuest": "ужасающий",
+            "descrQuest": "Прекрасный зимний вечер… Что может быть лучше, чем провести время с друзьями? Может, сходить в местный лабиринт страха...",
+            "locationQuest": "г. Дубна, ул. Промышленная 4а",
+            "imageUrl": "/images/CardImages/ForImage.png",
+            "priceQuest": 3000,
+            "maxPeople": "2-5",
+            "level": 2,
+            "keys": [
+                true,
+                true,
+                true,
+                false,
+                false
+            ]
+        },
+        {
+            "id": 5,
+            "nameQuest": "чумной доктор",
+            "descrQuest": "Прекрасный зимний вечер… Что может быть лучше, чем провести время с друзьями? Может, сходить в местный лабиринт страха...",
+            "locationQuest": "г. Дубна, ул. Промышленная 4а",
+            "imageUrl": "/images/CardImages/FiveImage.png",
+            "priceQuest": 3000,
+            "maxPeople": "2-5",
+            "level": 2,
+            "keys": [
+                true,
+                true,
+                true,
+                false,
+                false
+            ]
+        }
+    ]
+}

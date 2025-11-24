@@ -1,0 +1,32 @@
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: url("./arrow.png") center no-repeat;
+  width: 32px;
+  height: 32px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.swiper-button-prev {
+  left: 76px;
+  transform: rotate(180deg);
+}
+
+.swiper-button-next {
+  right: 76px;
+  top: calc(50% + 17px);
+}
+
+@media (max-width: 600px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}

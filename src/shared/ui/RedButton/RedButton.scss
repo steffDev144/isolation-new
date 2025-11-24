@@ -1,0 +1,56 @@
+.button-red {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    background-image: url("/images/SelectQuestBtn.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_text {
+        color: #000000;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        margin: 0 !important;
+        white-space: nowrap;
+        transition: 0.3s ease-in-out;
+        padding: 0 10px;
+    }
+
+    &:hover {
+        .button-red_text {
+            color: #fff;
+        }
+    }
+
+}
+
+@media (max-width: 350px) {
+    .button-red {
+        &_text {
+            font-size: 12px;
+        }
+    }
+}
+
+
+@media (max-width: 320px) {
+    .button-red {
+        &_text {
+            font-size: 10px;
+        }
+    }
+}
+
+@media (max-width: 300px) {
+    .button-red {
+        &_text {
+            font-size: 9px;
+        }
+    }
+}

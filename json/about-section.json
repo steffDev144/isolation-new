@@ -1,0 +1,50 @@
+[
+    {
+        "id": "Title",
+        "title_section_one": "ISOLATION – это то, что перенесет",
+        "title_section_two": "вас в абсолютно новый мир"
+    },
+    {
+        "id": "Descr",
+        "descr_section_one": "Хотели бы почувствовать себя главным героем фильма? Перенестись из современной реальности в череду захватывающих приключений                         и таинственных историй? В Isolation вы сможете почувствовать себя искателем сокровищ, бесстрашным авантюристом, харизматичным детективом или же жертвой в чьей-то зловещей игре! У нас Вы получите те самые эмоции, которые испытываете при просмотре любимого фильма,      но уже лично примерив на себе костюмы героев!",
+        "descr_section_two": "Мы далеко не единственные, у кого возникла идея создания квестов в реальности, но мы делаем все, чтобы вывести их на совершенно новый уровень и дарить людям те эмоции, которые они точно смогут назвать самыми яркими в своей жизни!",
+        "text_link": "присоединяйтесь к нашей группе vk"
+    },
+    {
+        "id": "Slider",
+        "slider_scroll": [
+            {
+                "id": 1,
+                "urlImage": "/images/teamGroups/oneTeam.png"
+            },
+            {
+                "id": 2,
+                "urlImage": "/images/teamGroups/twoTeam.png"
+            },
+            {
+                "id": 3,
+                "urlImage": "/images/teamGroups/threeTeam.png"
+            },
+            {
+                "id": 4,
+                "urlImage": "/images/teamGroups/forTeam.png"
+            },
+            {
+                "id": 5,
+                "urlImage": "/images/teamGroups/fiveTeam.png"
+            },
+            {
+                "id": 6,
+                "urlImage": "/images/teamGroups/oneTeam.png"
+            },
+            {
+                "id": 7,
+                "urlImage": "/images/teamGroups/twoTeam.png"
+            },
+            {
+                "id": 8,
+                "urlImage": "/images/teamGroups/threeTeam.png"
+            }
+        ]
+    }
+]

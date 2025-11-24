@@ -1,0 +1,144 @@
+.quests {
+    width: 100%;
+    height: auto;
+    padding: 100px 75px;
+
+    .container {
+        width: 95%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__title {
+        margin: 0 !important;
+        text-transform: uppercase;
+        color: #D3101F;
+        font-weight: 700;
+        font-size: 50px;
+        text-align: center;
+        width: 100%;
+        padding-top: 80px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 15px;
+        margin-top: 50px;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .quests {
+        padding: 65px 20px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .quests {
+        &__item {
+            width: 24%;
+
+            &_title {
+                padding: 10px 20px;
+            }
+
+            &_descr {
+                padding: 0 20px;
+            }
+
+            &_settings {
+                padding: 0 20px;
+            }
+
+            &_locate {
+                padding: 0 20px;
+            }
+
+            &_price {
+                padding: 20px 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .quests {
+        &__title {
+            font-size: 40px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .quests {
+        .container {
+            width: 72%;
+        }
+
+        &__title {
+            font-size: 36px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .quests {
+        &__wrapper {
+            &__title {
+                text-align: center;
+                font-size: 20px;
+                padding-top: 50px;
+            }
+
+            &__item {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 567px) {
+    .quests {
+        .container {
+            width: 95%;
+        }
+
+        &__title {
+            padding-top: 0px;
+            font-size: 36px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .quests {
+        padding: 0px 20px;
+
+        &__title {
+            text-align: center;
+            padding-top: 40px;
+        }
+
+        &__wrapper {
+            &__item {
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .quests {
+        &__wrapper {
+            margin-top: 25px;
+        }
+
+        &__title {
+            font-size: 30px;
+            // padding-top: 30px;
+        }
+    }
+}
