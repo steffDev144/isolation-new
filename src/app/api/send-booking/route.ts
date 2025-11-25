@@ -1,7 +1,7 @@
-export async function POST(request: NextRequest) {
+import { NextResponse, NextRequest } from "next/server";
+export async function POST(request: NextRequest, response: NextResponse) {
     const bookingData = await request.json();
 
-    // Отправка в Telegram вместо email
     const telegramMessage = `
 🎯 НОВАЯ БРОНЬ НА КВЕСТ
 
@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        chat_id: '1496174009',
+        chat_id: '-5058818249',
         text: telegramMessage,
         parse_mode: 'HTML'
       })
