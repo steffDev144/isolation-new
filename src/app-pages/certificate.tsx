@@ -193,6 +193,9 @@ export function CertificatePage() {
                     <Swiper
                         className="certificate__wrapper_slider-scroll"
                         slidesPerView={1}
+                        onSwiper={(swiper) => {
+                            swiperRef.current = swiper;
+                        }}
                         spaceBetween={20}
                         loop={true}
                     >

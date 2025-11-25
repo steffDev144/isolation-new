@@ -42,7 +42,7 @@ export function Record({ onTimeSelect }: RecordProps) {
       try {
         const response = await fetch('https://0275d3dd1dabf767.mokky.dev/quest-time');
         const data: ApiResponse[] = await response.json();
-        setUnavailableSlots(data[0].unavailable_slots);
+        setSlots(data[0].unavailable_slots);
       } catch (error) {
         console.error('Error fetching unavailable slots:', error);
       } finally {
@@ -50,12 +50,12 @@ export function Record({ onTimeSelect }: RecordProps) {
       }
     };
 
-    setSlots([
-      {
-        "date": "2025-11-23",
-        "time_slots": ['10:00', '17:30'],
-      },
-    ]);
+    // setSlots([
+    //   {
+    //     "date": "2025-11-23",
+    //     "time_slots": ['10:00', '17:30'],
+    //   },
+    // ]);
     fetchUnavailableSlots();
   }, []);
 
@@ -96,7 +96,7 @@ export function Record({ onTimeSelect }: RecordProps) {
           date={slot.date}
           onTimeSelect={handleTimeSelect}
           selectedTime={selectedTime}
-          questPrice={3000}
+          questPrice={3500}
           onCloseBooking={handleCloseBooking}
         />
       ))}
@@ -235,13 +235,10 @@ function generateTwoWeeksSchedule() {
       }
       
       // Рассчитываем цену
-      let price = 3000;
+      let price = 3500;
       
-      // +1000 если выходной
-      if (isWeekend) price += 1000;
-      
-      // +1000 если праздник
-      if (isHoliday) price += 1000;
+      // +1000 если выходной или праздник
+      if (isWeekend || isHoliday) price += 1000;
       
       // +1000 если время 22:00 или больше
       if (hour >= 22 || hour < 1) price += 1000;
@@ -274,9 +271,8 @@ function generateTwoWeeksSchedule() {
       isLastSlotActive = lastSlotDateTime > currentDate;
     }
     
-    let lastSlotPrice = 3000;
-    if (isWeekend) lastSlotPrice += 1000;
-    if (isHoliday) lastSlotPrice += 1000;
+    let lastSlotPrice = 3500;
+    if (isWeekend || isHoliday) lastSlotPrice += 1000;
     lastSlotPrice += 1000; // Всегда +1000 для 01:00
     
     timeSlots.push({

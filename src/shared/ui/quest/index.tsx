@@ -48,7 +48,7 @@ export function Quest({
     };
 
     return (
-        <Link href={`/quest/${id}`} className="quests__item" >
+        <div className="quests__item" >
 
             <div className="quests__item_img">
                 <Image width={300} height={300} src={imageUrl} alt={nameQuest} />
@@ -85,8 +85,8 @@ export function Quest({
 
             <div className="quests__item_price">
                 <p className="quests__item_price-value">от {priceQuest} ₽</p>
-                <RedButton classButton="quests__item_price-buy" textButton="забронировать" altImage="забронировать" />
+                <Link href={`/quest/${id}`}><RedButton classButton="quests__item_price-buy" textButton="забронировать" altImage="забронировать" /></Link>
             </div>
-        </Link>
+        </div>
     )
 }
