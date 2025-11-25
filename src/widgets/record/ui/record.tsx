@@ -12,6 +12,7 @@ interface TimeSlot {
 }
 
 interface UnavailableSlot {
+  id: number;
   date: string;
   day_of_week: string;
   time_slots: any;
@@ -29,9 +30,10 @@ interface ApiResponse {
 
 interface RecordProps {
   onTimeSelect?: (date: string, time: string) => void;
+  qId: number;
 }
 
-export function Record({ onTimeSelect }: RecordProps) {
+export function Record({ onTimeSelect, qId }: RecordProps) {
   const [selectedTime, setSelectedTime] = useState<{ date: string; time: string; price: number } | null>(null);
   const [unavailableSlots, setUnavailableSlots] = useState<UnavailableSlot[]>([]);
   const [slots, setSlots] = useState<Slots[]>([]);
@@ -91,6 +93,7 @@ export function Record({ onTimeSelect }: RecordProps) {
       {twoWeekSchedule.map((slot, index) => (
         <RecordList
           key={index}
+          id={qId}
           slots={slots}
           timeSlots={slot.timeSlots}
           date={slot.date}

@@ -9,6 +9,7 @@ interface TimeSlot {
 }
 
 interface RecordListProps {
+  id: number;
   timeSlots: TimeSlot[];
   slots: any;
   date: string;
@@ -19,6 +20,7 @@ interface RecordListProps {
 }
 
 export function RecordList({ 
+  id,
   timeSlots, 
   slots,
   date, 
@@ -54,7 +56,8 @@ export function RecordList({
   const formatDate = (dateStr) => { const d=new Date(dateStr), m=['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'], w=['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота']; return `${d.getDate()} ${m[d.getMonth()]}, ${w[d.getDay()]}`; }
 
   slots.map(slot => {
-    if(formatDate(slot.date) == date) {
+    if(formatDate(slot.date) == date && slot.id == id) {
+      console.log(slot);
       timeSlots = updateSlotsAvailability(timeSlots, slot.time_slots);
     }
   })

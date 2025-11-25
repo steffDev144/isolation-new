@@ -49,7 +49,7 @@ export function QuestPage({ quest }: QuestPageProps) {
                 <MobileSliderQuest />
             </div>
 
-            <Record onTimeSelect={handleTimeSelect} />
+            <Record onTimeSelect={handleTimeSelect} qId={quest.id} />
         </div>
     );
 }
