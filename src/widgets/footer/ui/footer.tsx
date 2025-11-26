@@ -24,6 +24,9 @@ export function Footer() {
 
     return (
         <footer className="footer">
+            <div className="modal">
+                <p>Пока на сайте ведутся тех работы будем рады вас записать через оператора по номеру <a href="tel:+79939091756">8 (993) 909-17-56</a></p>
+            </div>
             <div className="footer__head">
                 <div className="footer__head_logo">
                     <Logo />
