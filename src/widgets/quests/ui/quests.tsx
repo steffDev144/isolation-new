@@ -9,6 +9,7 @@ export interface CardsState {
   id: number;
   nameQuest: string;
   descrQuest: string;
+  descrQuestToo?: string;
   locationQuest: string;
   priceQuest: number;
   maxPeople: string;

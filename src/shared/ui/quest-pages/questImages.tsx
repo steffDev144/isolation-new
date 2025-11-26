@@ -1,20 +1,24 @@
 import Image from "next/image";
 
-export function QuestImages() {
+export function QuestImages(images, alt) {
+    
     return (
         <div className="quest__images">
-            <div className="quest__images_block">
-                <Image width={400} height={500} alt="картинка квеста" src="/images/quest-images/one.png" />
-
-            </div>
-            <div className="quest__images_block">
-                <Image width={400} height={500} alt="картинка квеста" src="/images/quest-images/two.png" />
-
-            </div>
-            <div className="quest__images_block">
-                <Image width={400} height={500} alt="картинка квеста" src="/images/quest-images/three.png" />
-
-            </div>
+            {images.images.map((img, key) => {
+                if(img.indexOf('http://') == 0 || img.indexOf('https://') == 0) {
+                    return (
+                        <div key={key} className="quest__images_block">
+                            <img width={400} height={500} alt={images.alt} src={img}/>
+                        </div>
+                    )
+                } else {
+                    return (
+                        <div key={key} className="quest__images_block">
+                            imageFilter = <Image width={400} height={500} src={img} alt={images.alt} />
+                        </div>
+                    )
+                }
+            })}
             {/* <Image alt="картинка квеста" layout="fill" src="/images/quest-images/two.png" />
             <Image alt="картинка квеста" layout="fill" src="/images/quest-images/three.png" /> */}
         </div>

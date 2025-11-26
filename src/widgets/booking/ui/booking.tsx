@@ -41,7 +41,10 @@ export function Booking({ date, time, onClose, questPrice }: BookingProps) {
     const isLateSession = parseInt(time.split(':')[0]) >= 22;
     const lateSessionFee = isLateSession ? 1000 : 0;
     
-    const totalPrice = (basePricePerPerson * participantsCount) + lateSessionFee;
+    let totalPrice = questPrice;
+    if(participantsCount > 2) {
+      totalPrice += (participantsCount - 2) * 900;
+    }
     
     const pricePerPerson = totalPrice / participantsCount;
 

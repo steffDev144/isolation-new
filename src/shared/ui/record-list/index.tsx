@@ -57,7 +57,6 @@ export function RecordList({
 
   slots.map(slot => {
     if(formatDate(slot.date) == date && slot.id == id) {
-      console.log(slot);
       timeSlots = updateSlotsAvailability(timeSlots, slot.time_slots);
     }
   })

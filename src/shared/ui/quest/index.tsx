@@ -47,11 +47,21 @@ export function Quest({
         ));
     };
 
+    let img;
+
+    if(imageUrl.indexOf('http://') == 0 || imageUrl.indexOf('https://') == 0) {
+        img = (
+            <img width={300} height={300} alt={nameQuest} src={imageUrl}/>
+        )
+    } else {
+        img = <Image width={300} height={300} src={imageUrl} alt={nameQuest} />
+    }
+
     return (
         <div className="quests__item" >
 
             <div className="quests__item_img">
-                <Image width={300} height={300} src={imageUrl} alt={nameQuest} />
+                {img}
             </div>
 
 

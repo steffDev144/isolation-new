@@ -44,13 +44,13 @@ export function Footer() {
                 </div>
 
                 <div className="footer__wrapper_links">
-                    <Link href="/policy" className="footer__wrapper_links-item">
+                    <Link href="https://vk.com/dubna_isolation" className="footer__wrapper_links-item">
                         <Vk />
                     </Link>
-                    <Link href="/policy">
+                    <Link href="https://t.me/isolationdubna">
                         <Telegram />
                     </Link>
-                    <Link href="/policy">
+                    <Link href="https://wa.clck.bar/79250674023">
                         <Whatsapp />
                     </Link>
                 </div>
