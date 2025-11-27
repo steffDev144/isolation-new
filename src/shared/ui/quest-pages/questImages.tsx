@@ -14,7 +14,7 @@ export function QuestImages(images, alt) {
                 } else {
                     return (
                         <div key={key} className="quest__images_block">
-                            imageFilter = <Image width={400} height={500} src={img} alt={images.alt} />
+                            <Image width={400} height={500} src={img} alt={images.alt} />
                         </div>
                     )
                 }
