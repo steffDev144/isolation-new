@@ -202,13 +202,7 @@ export function CertificatePage() {
                         {certificates.map((certificate) => (
                             <SwiperSlide key={certificate.id}>
                                 <div className="slide-image-container">
-                                    <Image
-                                        width={900}
-                                        height={900}
-                                        src={certificate.urlImage}
-                                        alt={`Сертификат ${certificate.id}`}
-                                        priority={certificate.id === 1}
-                                    />
+                                    <ViewImg id={certificate.id} url={certificate.urlImage} />
                                 </div>
                             </SwiperSlide>
                         ))}
@@ -217,4 +211,15 @@ export function CertificatePage() {
             </div>
         </div>
     );
+}
+
+
+function ViewImg(url: any, id: any) {
+    if(url.url.indexOf('http://') == 0 || url.url.indexOf('https://') == 0) {
+        return (
+            <img className="about-slider__image" width={900} height={900} alt={`Сертификат ${id}`} src={url.url}/>
+        )
+    } else {
+        return <Image className="about-slider__image" width={900} height={900} priority={id === 1} src={url.url} alt={`Сертификат ${id}`} />
+    }
 }

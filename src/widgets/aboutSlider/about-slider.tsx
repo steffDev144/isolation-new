@@ -26,7 +26,7 @@ interface AboutSliderProps {
 export function AboutSlider({ sliderData, fallbackData }: AboutSliderProps) {
     const swiperRef = useRef<SwiperType>(null);
     const sliderItems = sliderData?.slider_scroll || fallbackData;
-
+    
     return (
         <section className="about-slider">
             <div className="about-slider__container">
@@ -70,17 +70,22 @@ export function AboutSlider({ sliderData, fallbackData }: AboutSliderProps) {
                                 cursor: 'grab'
                             }}
                         >
-                            <Image
-                                className="about-slider__image"
-                                width={500}
-                                height={350}
-                                src={item.urlImage}
-                                alt="наши команды"
-                            />
+                            
+                            <ViewImg url={item.urlImage}/>
                         </SwiperSlide>
                     ))}
                 </Swiper>
             </div>
         </section>
     );
+}
+
+function ViewImg(url: any) {
+    if(url.url.indexOf('http://') == 0 || url.url.indexOf('https://') == 0) {
+        return (
+            <img className="about-slider__image" width={500} height={350} alt="наши команды" src={url.url}/>
+        )
+    } else {
+        return <Image className="about-slider__image" width={500} height={350} src={url.url} alt="наши команды" />
+    }
 }
