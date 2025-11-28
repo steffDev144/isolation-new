@@ -9,6 +9,7 @@ interface BookingProps {
   time: string;
   onClose: () => void;
   questPrice: number;
+  name: string;
 }
 
 interface FormData {
@@ -26,7 +27,7 @@ interface PriceCalculation {
   pricePerPerson: number;
 }
 
-export function Booking({ date, time, onClose, questPrice }: BookingProps) {
+export function Booking({ date, time, onClose, questPrice, name }: BookingProps) {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     phone: '',
@@ -89,7 +90,8 @@ export function Booking({ date, time, onClose, questPrice }: BookingProps) {
         time,
         totalPrice: `${calculatePrice()} руб.`,
         basePrice: questPrice,
-        priceCalculation
+        priceCalculation,
+        name
       };
 
       console.log('Sending booking data:', bookingData);

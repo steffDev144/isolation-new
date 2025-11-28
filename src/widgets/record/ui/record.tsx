@@ -31,9 +31,10 @@ interface ApiResponse {
 interface RecordProps {
   onTimeSelect?: (date: string, time: string) => void;
   qId: number;
+  name: string;
 }
 
-export function Record({ onTimeSelect, qId }: RecordProps) {
+export function Record({ onTimeSelect, qId, name }: RecordProps) {
   const [selectedTime, setSelectedTime] = useState<{ date: string; time: string; price: number } | null>(null);
   const [unavailableSlots, setUnavailableSlots] = useState<UnavailableSlot[]>([]);
   const [slots, setSlots] = useState<Slots[]>([]);
@@ -101,6 +102,7 @@ export function Record({ onTimeSelect, qId }: RecordProps) {
           selectedTime={selectedTime}
           questPrice={3500}
           onCloseBooking={handleCloseBooking}
+          name={name}
         />
       ))}
     </section>

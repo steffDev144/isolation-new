@@ -3,9 +3,8 @@ export async function POST(request: NextRequest, response: NextResponse) {
     const bookingData = await request.json();
 
     const telegramMessage = `
-🎯 НОВАЯ БРОНЬ НА КВЕСТ
+🎯 НОВАЯ БРОНЬ НА КВЕСТ: ${bookingData.name} 
 
-👤 Клиент: ${bookingData.name}
 📞 Телефон: ${bookingData.phone}
 👥 Участники: ${bookingData.participants}
 📅 Дата: ${bookingData.date || 'Не указана'}

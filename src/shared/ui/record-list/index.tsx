@@ -17,6 +17,7 @@ interface RecordListProps {
   selectedTime: { date: string; time: string; price: number } | null;
   questPrice: number;
   onCloseBooking: () => void;
+  name: string;
 }
 
 export function RecordList({ 
@@ -27,7 +28,8 @@ export function RecordList({
   onTimeSelect, 
   selectedTime, 
   questPrice, 
-  onCloseBooking 
+  onCloseBooking,
+  name
 }: RecordListProps) {
   const isTimeSelected = (time: string) => {
     return selectedTime?.date === date && selectedTime?.time === time;
@@ -90,6 +92,7 @@ export function RecordList({
             time={selectedTime.time}
             onClose={onCloseBooking}
             questPrice={selectedTime.price}
+            name={name}
           />
         </div>
       )}
