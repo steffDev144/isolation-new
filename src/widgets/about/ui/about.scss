@@ -76,6 +76,10 @@
     margin: 0 !important;
     height: 390px !important;
 
+    * {
+        height: 100%!important;
+    }
+
     &__container {
         overflow: hidden;
         width: 100%;
@@ -103,7 +107,7 @@
     }
 
     &__image {
-        width: 90%;
+        width: 100%;
         // height: auto;
         object-fit: cover;
     }
