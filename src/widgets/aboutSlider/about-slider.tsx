@@ -34,6 +34,7 @@ export function AboutSlider({ sliderData, fallbackData }: AboutSliderProps) {
                     className="about-slider__swiper"
                     modules={[Autoplay, FreeMode]}
                     slidesPerView={"auto"}
+                    spaceBetween={0}
                     loop={true}
                     freeMode={{
                         enabled: true,
