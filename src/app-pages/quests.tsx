@@ -40,6 +40,7 @@ export function QuestPage({ quest }: QuestPageProps) {
                         price={quest.priceQuest}
                         maxPeople={quest.maxPeople}
                         level={quest.level}
+                        history={quest.history}
                     />
                     <QuestText description={quest.descrQuest} />
                     <QuestText description={quest.descrQuestToo} />

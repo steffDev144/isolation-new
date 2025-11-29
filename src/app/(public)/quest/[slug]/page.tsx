@@ -74,6 +74,7 @@ export default async function Quest({ params }: PageProps) {
   const transformedQuest: CardsState = {
     ...quest,
     location: quest.locationQuest,
+    history: quest.history,
     price: typeof quest.price === 'object' && quest.price !== null
       ? (quest.price as { starting_from: number }).starting_from
       : (quest.price as number) || 0,
