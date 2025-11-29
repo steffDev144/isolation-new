@@ -139,7 +139,7 @@ export function Booking({ date, time, onClose, questPrice, name }: BookingProps)
           </div>
           
           <form onSubmit={handleSubmit} className="booking__form">
-            <label className="booking__form_contact" style={{display: "none"}}>
+            {/* <label className="booking__form_contact" style={{display: "none"}}>
               <span className="booking__form_contact-title">Ваше имя <span>*</span></span>
               <input 
                 type="text" 
@@ -151,7 +151,7 @@ export function Booking({ date, time, onClose, questPrice, name }: BookingProps)
                 required
                 disabled={isSubmitting}
               />
-            </label>
+            </label> */}
             
             <label className="booking__form_contact">
               <span className="booking__form_contact-title">Номер телефона <span>*</span></span>
