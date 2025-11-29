@@ -92,6 +92,12 @@ export function QuestBlock({ location, price, maxPeople, level }: QuestBlockProp
         <h5 className="quest__info_block-item_title">Цена:</h5>
         <p className="quest__info_block-item_descr">от {quest_info.price.starting_from} руб</p>
         <Image src="/icons/questionIcon.svg" width={20} height={20} alt="подробнее" />
+        <div className="q_modal first" style={{width: "455px"}}>
+          Стоимость квеста за 2 участников - 4 500 руб.
+          Стоимость за каждого дополнительного игрока - 900 руб.
+          Вечернее время - 1 000 руб. к общей стоимости на команду
+          Выходные дни - 1 000 руб. к общей стоимости на команду
+        </div>
       </div>
       <div className="quest__info_block-item">
         <h5 className="quest__info_block-item_title">Уровень страха:</h5>
@@ -99,11 +105,19 @@ export function QuestBlock({ location, price, maxPeople, level }: QuestBlockProp
           {quest_info.fear_level.value}/{quest_info.fear_level.max}
         </p>
         <Image src="/icons/questionIcon.svg" width={20} height={20} alt="подробнее" />
+        <div className="q_modal" style={{width: "396px"}}>
+          0/5 - полностью без страха: яркий свет, нет страшных декораций <br />
+          1/5 - полное освещение, возможен страшный декор <br />
+          2/5 - страшный декор, антуражное освещение, возможны скримеры <br />
+          3/5 - страшный декор, скримеры, умеренная игра актера <br />
+          4/5 - страшный декор, скримеры, плотный контакт с актерами и механизмами <br />
+          5/5 - страшный декор, скримеры, очень плотный и частый контакт с актерами и механизмами <br />
+        </div>
       </div>
       <div className="quest__info_block-item">
         <h5 className="quest__info_block-item_title">Адрес:</h5>
         <p className="quest__info_block-item_descr">
-          {quest_info.address.city}, {quest_info.address.street} {quest_info.address.building}
+          {location}
         </p>
       </div>
       <div className="quest__info_block-item">
@@ -112,6 +126,9 @@ export function QuestBlock({ location, price, maxPeople, level }: QuestBlockProp
           {quest_info.versions.description}
         </p>
         <Image src="/icons/questionIcon.svg" width={20} height={20} alt="подробнее" />
+        <div className="q_modal" style={{width: "320px"}}>
+          Это место, которое давно не посещали люди, приют считается заброшенным и в нем давно никто не работает. Однако, слухи говорят об обратном, и ребятам предстоит проверить данную информацию. Настоятельница отправится вместе с командой, чтобы помочь им ориентироваться в этих стенах.
+        </div>
       </div>
     </div>
   );
