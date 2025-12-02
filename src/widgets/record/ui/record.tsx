@@ -266,25 +266,29 @@ function generateTwoWeeksSchedule() {
       }
     }
     
-    // Добавляем последний слот 01:00
-    const lastSlotDateTime = new Date(date);
-    lastSlotDateTime.setDate(date.getDate() + 1);
-    lastSlotDateTime.setHours(1, 0, 0, 0);
-    
-    let isLastSlotActive = true;
-    if (i === 0) {
-      isLastSlotActive = lastSlotDateTime > currentDate;
+    if(dayOfWeek == 'Пятница' || dayOfWeek == 'Суббота') {
+      // Добавляем последний слот 01:00
+      const lastSlotDateTime = new Date(date);
+      lastSlotDateTime.setDate(date.getDate() + 1);
+      lastSlotDateTime.setHours(1, 0, 0, 0);
+      let isLastSlotActive = true;
+      if (i === 0) {
+        isLastSlotActive = lastSlotDateTime > currentDate;
+      }
+      let lastSlotPrice = 3500;
+      if (isWeekend || isHoliday) lastSlotPrice += 1000;
+      lastSlotPrice += 1000; // Всегда +1000 для 01:00
+      
+      timeSlots.push({
+        time: '01:00',
+        price: lastSlotPrice,
+        available: isLastSlotActive
+      });
     }
     
-    let lastSlotPrice = 3500;
-    if (isWeekend || isHoliday) lastSlotPrice += 1000;
-    lastSlotPrice += 1000; // Всегда +1000 для 01:00
     
-    timeSlots.push({
-      time: '01:00',
-      price: lastSlotPrice,
-      available: isLastSlotActive
-    });
+    
+    
 
     schedule.push({
       date: dateString,
