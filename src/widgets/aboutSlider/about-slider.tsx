@@ -28,7 +28,7 @@ export function AboutSlider({ sliderData, fallbackData }: AboutSliderProps) {
     const sliderItems = sliderData?.slider_scroll || fallbackData;
     
     return (
-        <section className="about-slider">
+        <section className="about-slider" style={{"pointerEvents": "none"}}>
             <div className="about-slider__container">
                 <Swiper
                     className="about-slider__swiper"
@@ -68,7 +68,7 @@ export function AboutSlider({ sliderData, fallbackData }: AboutSliderProps) {
                             style={{
                                 width: '500px',
                                 flexShrink: 0,
-                                cursor: 'grab'
+                                cursor: 'default'
                             }}
                         >
                             
